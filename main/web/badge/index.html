@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>AI Passport 工牌与灯牌</title>
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <link rel="stylesheet" href="/style.css?v=2026101703">
+  <script defer src="/badge_image.js?v=2026101703"></script>
+  <script defer src="/app.js?v=2026101703"></script>
+  <script defer src="/lightboard_charset.js?v=2026101703"></script>
+  <script defer src="/lightboard_protocol.js?v=2026101703"></script>
+  <script defer src="/lightboard_layout.js?v=2026101703"></script>
+  <script defer src="/lightboard_app.js?v=2026101703"></script>
+</head>
+<body>
+  <main>
+    <header><p class="eyebrow">AI PASSPORT</p><h1>设置我的工牌</h1><p id="connection">正在连接设备…</p></header>
+    <form id="profile-form">
+      <section class="card photo-card">
+        <h2>照片</h2>
+        <canvas id="preview" width="200" height="200" aria-label="工牌照片预览"></canvas>
+        <label class="file-button">选择照片<input id="photo" type="file" accept="image/jpeg,image/png,image/*"></label>
+        <label class="zoom">缩放<input id="zoom" type="range" min="1" max="4" step="0.01" value="1"></label>
+        <button id="rotate" type="button" class="secondary">旋转 90°</button>
+        <fieldset class="shape-picker">
+          <legend>照片形状</legend>
+          <label><input type="radio" name="shape" value="square" checked>方形</label>
+          <label><input type="radio" name="shape" value="rounded">圆角</label>
+          <label><input type="radio" name="shape" value="circle">圆形</label>
+        </fieldset>
+        <p class="hint">拖动照片调整位置，原图不会上传。</p>
+      </section>
+      <section class="card">
+        <label for="name"><h2>姓名</h2></label>
+        <input id="name" type="text" autocomplete="name" maxlength="48" placeholder="请输入姓名">
+        <p id="name-count" class="counter">0/48 字节</p>
+      </section>
+      <section class="card">
+        <label for="bio"><h2>自定义语句</h2></label>
+        <input id="bio" type="text" maxlength="96" placeholder="例如：保持好奇，持续创造">
+        <p id="bio-count" class="counter">0/96 字节</p>
+      </section>
+      <p id="message" role="status" aria-live="polite"></p>
+      <button id="save" type="submit" class="primary" disabled>保存工牌</button>
+    </form>
+    <form id="lightboard-form" class="lightboard-form">
+      <section class="card">
+        <h2>应援灯牌</h2>
+        <label for="lightboard-texts">一行一条，按顺序循环播放</label>
+        <textarea id="lightboard-texts" rows="7" spellcheck="false" disabled
+          aria-describedby="lightboard-help lightboard-count" placeholder="Hello 1024&#10;今天不修 BUG"></textarea>
+        <p id="lightboard-help" class="hint">最多 6 条，每条 20 个字符。数字、字母、汉字、标点和行内空格各算 1；忽略空行和首尾空白。不支持 emoji 和部分生僻字。</p>
+        <p id="lightboard-count" class="counter">0/6 条</p>
+      </section>
+      <section class="card lightboard-preview-card">
+        <h2>设备效果预览</h2>
+        <canvas id="lightboard-preview" width="240" height="320" aria-label="竖屏霓虹灯牌预览"></canvas>
+        <p id="lightboard-caption" class="hint">正在读取设备文案…</p>
+        <button id="lightboard-next" type="button" class="secondary" disabled>下一条预览</button>
+      </section>
+      <p id="lightboard-message" role="status" aria-live="polite"></p>
+      <button id="lightboard-save" type="submit" class="primary" disabled>保存灯牌</button>
+      <button id="lightboard-reload" type="button" class="secondary reload-button">重新读取设备</button>
+      <p class="hint">离线字体随页面加载。重新读取会刷新配置版本，并保留尚未保存的编辑。</p>
+    </form>
+  </main>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{
+  "sha256": "13e9c96aa975bfb9baf89f1e4a04334a84cc8e8fa9816d95f58881bbc52aad68",
+  "bytes": 164938,
+  "maxStripBytes": 3120,
+  "items": [
+    {
+      "text": "需求不改，指定能橙",
+      "mode": "scroll",
+      "width": 589,
+      "height": 80,
+      "rawBytes": 94240
+    },
+    {
+      "text": "今天不修 BUG",
+      "mode": "poster",
+      "width": 176,
+      "height": 255,
+      "rawBytes": 89760
+    },
+    {
+      "text": "禁止周五上线",
+      "mode": "poster",
+      "width": 184,
+      "height": 264,
+      "rawBytes": 97152
+    },
+    {
+      "text": "Hello 1024",
+      "mode": "poster",
+      "width": 217,
+      "height": 159,
+      "rawBytes": 69006
+    },
+    {
+      "text": "代码无 BUG，生活有 LOVE",
+      "mode": "scroll",
+      "width": 780,
+      "height": 80,
+      "rawBytes": 124800
+    },
+    {
+      "text": "编译通过，万事顺遂",
+      "mode": "scroll",
+      "width": 590,
+      "height": 80,
+      "rawBytes": 94400
+    }
+  ]
+}

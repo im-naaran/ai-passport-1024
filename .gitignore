@@ -1,0 +1,21 @@
+# Operating-system and editor metadata.
+.DS_Store
+.idea/
+.vscode/
+
+# PlatformIO / ESP-IDF generated files.
+/.pio/
+/build/
+/managed_components/
+/sdkconfig
+/sdkconfig.old
+/sdkconfig.*
+!/sdkconfig.defaults
+!/sdkconfig.defaults.*
+
+# Python and local diagnostics.
+__pycache__/
+*.py[cod]
+/*.log
+/serial-*.txt
+/core

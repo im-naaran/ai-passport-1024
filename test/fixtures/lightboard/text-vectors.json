@@ -1,0 +1,76 @@
+[
+  {
+    "id": "mixed",
+    "input": " \u4e2dA1\uff01 \r\nHello 1024\n\n",
+    "texts": [
+      "\u4e2dA1\uff01",
+      "Hello 1024"
+    ]
+  },
+  {
+    "id": "duplicates",
+    "input": "\u4f60\u597d\n\u4f60\u597d",
+    "texts": [
+      "\u4f60\u597d",
+      "\u4f60\u597d"
+    ]
+  },
+  {
+    "id": "twenty",
+    "input": "\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d",
+    "texts": [
+      "\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d\u4e2d"
+    ]
+  },
+  {
+    "id": "twenty_ascii",
+    "input": "A1! A1! A1! A1! A1! ",
+    "texts": [
+      "A1! A1! A1! A1! A1!"
+    ]
+  },
+  {
+    "id": "twenty_one",
+    "input": "aaaaaaaaaaaaaaaaaaaaa",
+    "texts": null
+  },
+  {
+    "id": "seven",
+    "input": "a\na\na\na\na\na\na\n",
+    "texts": null
+  },
+  {
+    "id": "blank",
+    "input": " \t\r\n\n",
+    "texts": null
+  },
+  {
+    "id": "inner_control",
+    "input": "a\tb",
+    "texts": null
+  },
+  {
+    "id": "unsupported",
+    "input": "emoji\ud83d\ude00",
+    "texts": null
+  },
+  {
+    "id": "surrogate",
+    "input": "\ud800",
+    "texts": null
+  },
+  {
+    "id": "trim_unicode",
+    "input": "\u3000\u4f60\u597d\u00a0",
+    "texts": [
+      "\u4f60\u597d"
+    ]
+  },
+  {
+    "id": "inner_space",
+    "input": "\u7532 \u4e59",
+    "texts": [
+      "\u7532 \u4e59"
+    ]
+  }
+]
